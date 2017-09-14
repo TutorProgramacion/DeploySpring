@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Deploy Spring App</title>
+
+    <style type="text/css">
+
+    body {
+        text-align: center;
+        font-family: Segoe UI Light;
+    }
+
+    h3 {
+        background-color: #9E9E9E;
+        color: whitesmoke;
+        padding: 10px;
+    }
+
+    a {
+        color: #009688;
+        text-decoration: none;
+    }
+
+    ul li {
+        text-align: left;
+        list-style-type: decimal;
+    }
+
+    .main {
+        text-align: center;
+        border: solid gray 1px;
+        display: inline-block;
+        padding: 30px;
+        box-shadow: rgba(0, 0, 0, 0.30) 2px 2px 5px 0px;
+        margin-top: 100px;
+    }
+    </style>
+
+</head>
+<body>
+
+<div class="main">
+
+    <h1>Spring Boot Deploy Example</h1>
+    <p>
+        <a href="http://acodigo.blogspot.com/" th:text="${message}"></a>
+    </p>
+
+    <h3>Tutoriales Spring Boot</h3>
+
+    <ul>
+        <li><a href="http://acodigo.blogspot.com/2017/04/spring-boot-crear-una-aplicacion-web.html" target="_blank">Programación de aplicaciones web con Spring Boot</a> </li>
+        <li><a href="http://acodigo.blogspot.com/2017/04/spring-boot-crear-archivo-war.html" target="_blank">Empaquetar una aplicación Spring Boot en un archivo war</a> </li>
+        <li><a href="http://acodigo.blogspot.com/2015/05/spring-data-rest-accediendo-datos.html" target="_blank">Creación de un servicio REST con Spring Data Rest</a> </li>
+        <li><a href="http://acodigo.blogspot.com/2017/05/configurar-fechas-json-jackson-en.html" target="_blank">Configurar formato de fechas - JSON Jackson</a></li>
+        <li><a href="http://acodigo.blogspot.com/2017/06/integrar-vaadin-spring-boot.html" target="_blank">Integración con Vaadin Framework</a></li>
+        <li><a href="http://acodigo.blogspot.com/2017/06/spring-boot-vaadin-hibernate-jpa.html" target="_blank">Vaadin Spring Data JPA</a></li>
+        <li><a href="http://acodigo.blogspot.com/2017/07/validacion-vaadin-spring-boot.html" target="_blank">Validar formularios Vaadin</a></li>
+        <li><a href="http://acodigo.blogspot.com/2017/08/spring-twitter-api.html" target="_blank">Spring Social Twitter</a></li>
+        <li><a href="http://acodigo.blogspot.com/2017/08/spring-facebook-api.html" target="_blank">Spring Social Facebook</a></li>
+    </ul>
+
+</div>
+
+</body>
+</html>
