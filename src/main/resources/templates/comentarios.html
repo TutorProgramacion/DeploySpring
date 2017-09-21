@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Escribe un Comentario</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style type="text/css">
+            .comment {
+                margin: 10px;
+                border: gray solid 1px;
+                border-radius: 2px;
+                padding: 10px;
+                box-shadow: #d9d9d9 2px 2px 5px 0px;
+            }
+            
+            label {
+                display: block;
+            }
+            
+            input, textarea {
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Conectar a BD PostgreSQL en Heroku</h1>
+        
+        <p>Esta página es para la prueba de configuración de la base de datos Postgresql en Heoku.</p>
+       
+        <h3>Comentar</h3>
+        
+        <form th:action="@{/guardar}" th:object="${comentario}" method="POST">
+            <label>Nombre:</label>
+            <input type="text" th:field="*{nombre}" />
+            <br />
+            <label>Fecha:</label>
+            <input type="date" th:field="*{fecha}" />
+            <br />
+            <label>Comentario:</label>
+            <textarea th:field="*{texto}"></textarea>
+            <br />
+            <input type="submit" value="Enviar" />
+        </form>
+        
+        <div>
+            <div th:each="cmt : ${cmtList}" class="comment">
+                <span th:text="${{cmt.nombre}}"></span>
+                <span th:text="${{cmt.fecha}}"></span>
+                <br />
+                <span th:text="${{cmt.texto}}"></span> 
+            </div>
+        </div>
+    </body>
+</html>
